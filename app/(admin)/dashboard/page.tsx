@@ -3,9 +3,13 @@ import API_URL, { ProductType } from "@/lib/definitions";
 import { useEffect, useState } from "react";
 import DataTable, { TableColumn } from "react-data-table-component";
 import ViewPage from "../view/[ id ]/page";
+import { useRouter } from "next/navigation";
 
+
+  
 
 export default function Dashboard() {
+  const router = useRouter();
   const [products, setProducts] = useState<ProductType[]>([]);
   const [loading, setLoading] = useState<boolean>(false);
   const [openModal, setOpenModal] = useState(false);
@@ -17,7 +21,7 @@ export default function Dashboard() {
       .then((res) => res.json())
       .then((data) => {
         if (Array.isArray(data.results)) {
-          const sliced = data.results.slice(0, 10);
+          const sliced = data.results.slice(0, 8);
           setProducts(sliced);
         } else {
           console.error("Fetched data is not an array:", data.results);
@@ -42,7 +46,7 @@ export default function Dashboard() {
     },
     {
       name: "Price ( USD )",
-      selector: (row) => row.price,
+      selector: (row) => row.price?.toString() || "0",
       sortable: true,
     },
     {
@@ -93,6 +97,15 @@ export default function Dashboard() {
           onClose={() => setOpenModal(false)}
         />
       )}
+
+      <div className="flex flex-col items-center justify-between mt-4 gap-4">
+        <a
+          onClick={() => router.push(`/create`)}
+          className="px-16 rounded-lg bg-cyan-700 py-2.5 text-center text-sm font-medium text-white hover:bg-cyan-800 focus:outline-none focus:ring-4 focus:ring-cyan-300"
+        >
+          Create Product
+        </a>
+      </div>
     </main>
   );
 }

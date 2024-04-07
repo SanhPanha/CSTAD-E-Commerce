@@ -47,11 +47,11 @@ export default function CardProduct({
           Price: ${price}
         </span>
 
-        <div className="flex flex-col items-center justify-between mt-4 gap-4">
-          <a href="#" className="px-16 rounded-lg bg-cyan-700 py-2.5 text-center text-sm font-medium text-white hover:bg-cyan-800 focus:outline-none focus:ring-4 focus:ring-cyan-300">
-            Add to cart
-          </a>
-        </div>
+          <div className="flex flex-col items-center justify-between mt-4 gap-4">
+            <a href="#" className="px-16 rounded-lg bg-cyan-700 py-2.5 text-center text-sm font-medium text-white hover:bg-cyan-800 focus:outline-none focus:ring-4 focus:ring-cyan-300">
+              Add to cart
+            </a>
+          </div>
       </Card>
     </div>
   );
