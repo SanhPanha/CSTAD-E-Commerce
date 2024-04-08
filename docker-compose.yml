@@ -7,7 +7,7 @@ services:
       dockerfile: Dockerfile
     restart: always
     ports:
-      - 3202:3000
+      - 3204:3000
     networks:
       - data_analytics
 networks:
