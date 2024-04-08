@@ -1,5 +1,6 @@
+'use client'
 import { useEffect, useState } from "react";
-import API_URL, { ProductType } from "@/lib/definitions";
+import API_URL from "@/lib/definitions";
 import { Modal } from "flowbite-react";
 import Image from "next/image";
 
@@ -8,7 +9,24 @@ interface ViewPageProps {
   onClose: () => void;
 }
 
-const ViewPage: React.FC<ViewPageProps> = ({ productDetail, onClose }) => {
+type CategoryType = {
+  name: string;
+  icon: string;
+};
+
+type ProductType = {
+  id?: number;
+  name?: string;
+  price?: number;
+  category?: CategoryType;
+  desc?: string;
+  image: string;
+  seller?: string;
+  onClick?: () => void;
+  quantity?: number;
+};
+
+const ViewPage = ({ productDetail, onClose }:any) => {
   const [data, setData] = useState<any>(null);
   const imagePlaceholder =
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTI4PG970kLEIAwXbJGaMfq5tlVDqnBbuDP_MRmm2JlhA&s";

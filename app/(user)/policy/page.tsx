@@ -1,9 +1,10 @@
-// pages/policy.tsx
-
+// Import necessary modules
 import React from 'react';
 import Head from 'next/head';
 
+// Define the PolicyPage component
 const PolicyPage: React.FC = () => {
+  // Return JSX content
   return (
     <div className="bg-gray-100 min-h-screen">
       <Head>
@@ -37,17 +38,17 @@ const PolicyPage: React.FC = () => {
             methods, delivery times, and related information. We offer various shipping options to
             accommodate your needs and preferences.
           </p>
-          <p className="text-gray-600 leading-relaxed mt-2">
+          {/* <p className="text-gray-600 leading-relaxed mt-2">
             Shipping times may vary depending on your location and the items you've ordered. We aim
             to process and ship orders promptly, but please note that delays may occur due to factors
             beyond our control, such as weather conditions or carrier issues.
-          </p>
+          </p> */}
         </div>
         <div className="bg-white rounded-lg p-6 shadow-md">
-          <h2 className="text-xl font-semibold text-gray-800 mb-2">3. Return & Refund Policy</h2>
+          <h2 className="text-xl font-semibold text-gray-800 mb-2">3. Return &amp; Refund Policy</h2>
           <p className="text-gray-600 leading-relaxed">
-            We want you to be satisfied with your purchase. Our Return & Refund Policy outlines the
-            process for returning items and requesting refunds. If you're not completely happy with
+            We want you to be satisfied with your purchase. Our Return &amp; Refund Policy outlines the
+            process for returning items and requesting refunds. If you&apos;re not completely happy with
             your purchase, you may return it for a refund or exchange within a specified period.
           </p>
           <p className="text-gray-600 leading-relaxed mt-2">
@@ -67,4 +68,5 @@ const PolicyPage: React.FC = () => {
   );
 };
 
+// Export the PolicyPage component as default
 export default PolicyPage;

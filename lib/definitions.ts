@@ -7,7 +7,7 @@ type CategoryType = {
   icon: string;
 };
 
-export type ProductType = {
+type ProductType = {
   id?: number;
   name?: string;
   price?: number;
@@ -37,4 +37,5 @@ const initialValues = {
 
 export {  token, initialValues , API_URL_CREATE};
 export default API_URL;
+export type { ProductType };
 // export { token };

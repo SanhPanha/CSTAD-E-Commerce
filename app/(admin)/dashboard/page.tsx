@@ -2,11 +2,8 @@
 import API_URL, { ProductType } from "@/lib/definitions";
 import { useEffect, useState } from "react";
 import DataTable, { TableColumn } from "react-data-table-component";
-import ViewPage from "../view/[ id ]/page";
 import { useRouter } from "next/navigation";
-
-
-  
+import ViewPage from "../view/[ id ]/page";
 
 export default function Dashboard() {
   const router = useRouter();
