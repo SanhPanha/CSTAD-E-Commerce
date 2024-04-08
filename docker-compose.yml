@@ -1,6 +1,6 @@
 version: '3'
 services:
-  makara:
+  panha:
     image: panha_nextjs:latest
     build:
       context: .
