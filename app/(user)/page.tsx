@@ -17,9 +17,9 @@ export default function Service() {
 
   return (
     <div className="flex flex-col items-center justify-center my-10">
-      <h1 className="text-4xl font-bold text-center text-gray-900 my-4">
+      <h2 className="text-4xl font-bold text-center text-gray-900 my-4">
         CSTAD E-COMMERCE
-      </h1>
+      </h2>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {products.map((product: any, index) => (

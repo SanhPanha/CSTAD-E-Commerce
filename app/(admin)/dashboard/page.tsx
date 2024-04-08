@@ -59,7 +59,7 @@ export default function Dashboard() {
     {
       name: "Action",
       selector: (row): any => (
-        <div className="flex space-x-2">
+        <div className="flex space-x-1 ">
           <button
             onClick={() => handleViewProduct(row)}
             className="px-4 py-2 text-white bg-blue-500 rounded hover:bg-blue-700"
@@ -78,13 +78,13 @@ export default function Dashboard() {
   ];
 
   return (
-    <main className="h-screen ">
+    <main className="h-screen my-10 rounded-md w-[90%]">
       <DataTable
         fixedHeader
         progressPending={loading}
         columns={columns}
         data={products}
-        pagination={true}
+        // pagination={true}
         striped
         highlightOnHover
       />

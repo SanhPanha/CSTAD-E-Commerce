@@ -22,6 +22,7 @@ type MenuItem = {
 export default function NavbarComponent() {
   const pathname = usePathname();
   const [menu, setMenu] = useState<MenuItem[]>(MenuList);
+ 
 
   return (
     <Navbar
@@ -30,7 +31,9 @@ export default function NavbarComponent() {
       rounded
       className="w-full bg-blue-800 flex justify-center "
     >
-      <NavbarToggle className="text-white border-0 hover:text-primary sm:left-0 delay-75" />
+      <NavbarToggle
+        className="text-white border-0 hover:text-primary sm:left-0 delay-75"
+      />
       <NavbarBrand as={Link} href="/">
         <img
           src="https://istad.co/resources/img/logo_md.png"

@@ -39,15 +39,17 @@ export default async function Detail(props: Props) {
   let data = await getData(props.params.id);
 
   return (
-    <div className="h-screen grid place-content-center">
+    <main className="h-screen grid place-content-center shadow-2xl">
       <CardComponent
-        title={data?.title || "NoTitle"}
-        desc={data?.desc || "No Description"}
         image={
           data?.image ||
           "https://i0.wp.com/sunrisedaycamp.org/wp-content/uploads/2020/10/placeholder.png?ssl=1"
         }
+        name={data?.title || "NoTitle"}
+        price={data?.price || 0}
+        seller={data?.seller || "No Seller"}
+        desc={data?.desc || "No Description"}
       />
-    </div>
+    </main>
   );
 }

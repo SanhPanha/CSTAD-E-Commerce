@@ -115,7 +115,7 @@ export default function Product() {
   };
 
   return (
-    <main>
+    <main className="my-10">
       <Formik
         initialValues={initialValues}
         validationSchema={validationSchema}
@@ -154,169 +154,187 @@ export default function Product() {
         }}
       >
         {({ setFieldValue }) => (
-          <Form className="max-w-md mx-auto p-4 bg-white shadow-md rounded">
-            <h1 className="text-2xl mb-4 text-center font-bold">
-              Create Product
-            </h1>
-            {/* Product Name */}
-            <div className="mb-4">
-              <label
-                htmlFor="name"
-                className="block text-sm font-medium text-gray-700"
-              >
-                Product Name
-              </label>
-              <Field
-                type="text"
-                name="name"
-                id="name"
-                className="mt-1 p-2 border rounded w-full"
-              />
-              <ErrorMessage
-                name="name"
-                component="div"
-                className="text-red-500 mt-1 text-sm"
-              />
-            </div>
+          <Form className="w-[300px] xl:w-[700px] md:w-[500px] sm:w-[300px] mx-auto p-4 bg-white shadow-md rounded">
+            <section className="px-6">
+              <h1 className="text-2xl mb-4 text-center font-bold">
+                Create Product
+              </h1>
+              {/* Product Name */}
+              <div className="mb-4">
+                <label
+                  htmlFor="name"
+                  className="block text-sm font-medium text-gray-700"
+                >
+                  Product Name
+                </label>
+                <Field
+                  type="text"
+                  name="name"
+                  id="name"
+                  className="mt-1 p-2 border rounded w-full"
+                />
+                <ErrorMessage
+                  name="name"
+                  component="div"
+                  className="text-red-500 mt-1 text-sm"
+                />
+              </div>
 
-            {/* Product Description */}
-            <div className="mb-4">
-              <label
-                htmlFor="desc"
-                className="block text-sm font-medium text-gray-700"
-              >
-                Product Description
-              </label>
-              <Field
-                type="text"
-                name="desc"
-                id="desc"
-                component="textarea"
-                className="mt-1 p-2 border rounded w-full"
-              />
-              <ErrorMessage
-                name="desc"
-                component="div"
-                className="text-red-500 mt-1 text-sm"
-              />
-            </div>
+              {/* Product Description */}
+              <div className="mb-4">
+                <label
+                  htmlFor="desc"
+                  className="block text-sm font-medium text-gray-700"
+                >
+                  Product Description
+                </label>
+                <Field
+                  type="text"
+                  name="desc"
+                  id="desc"
+                  component="textarea"
+                  className="mt-1 p-2 border rounded w-full"
+                />
+                <ErrorMessage
+                  name="desc"
+                  component="div"
+                  className="text-red-500 mt-1 text-sm"
+                />
+              </div>
 
-            {/* Product Price */}
-            <div className="mb-4">
-              <label
-                htmlFor="price"
-                className="block text-sm font-medium text-gray-700"
-              >
-                Product Price
-              </label>
-              <Field
-                type="number"
-                name="price"
-                id="price"
-                className="mt-1 p-2 border rounded w-full"
-              />
-              <ErrorMessage
-                name="price"
-                component="div"
-                className="text-red-500 mt-1 text-sm"
-              />
-            </div>
+              {/* Product Price */}
+              <div className="mb-4">
+                <label
+                  htmlFor="price"
+                  className="block text-sm font-medium text-gray-700"
+                >
+                  Product Price
+                </label>
+                <Field
+                  type="number"
+                  name="price"
+                  id="price"
+                  className="mt-1 p-2 border rounded w-full"
+                />
+                <ErrorMessage
+                  name="price"
+                  component="div"
+                  className="text-red-500 mt-1 text-sm"
+                />
+              </div>
 
-            {/* Product Quantity */}
-            <div className="mb-4">
-              <label
-                htmlFor="quantity"
-                className="block text-sm font-medium text-gray-700"
-              >
-                Product Quantity
-              </label>
-              <Field
-                type="number"
-                name="quantity"
-                id="quantity"
-                className="mt-1 p-2 border rounded w-full"
-              />
-              <ErrorMessage
-                name="quantity"
-                component="div"
-                className="text-red-500 mt-1 text-sm"
-              />
-            </div>
+              {/* Product Quantity */}
+              <div className="mb-4">
+                <label
+                  htmlFor="quantity"
+                  className="block text-sm font-medium text-gray-700"
+                >
+                  Product Quantity
+                </label>
+                <Field
+                  type="number"
+                  name="quantity"
+                  id="quantity"
+                  className="mt-1 p-2 border rounded w-full"
+                />
+                <ErrorMessage
+                  name="quantity"
+                  component="div"
+                  className="text-red-500 mt-1 text-sm"
+                />
+              </div>
 
-            {/* Product Category */}
-            <div className="mb-4">
-              <label
-                htmlFor="categoryName"
-                className="block text-sm font-medium text-gray-700"
-              >
-                Product Category Name
-              </label>
-              <Field
-                type="text"
-                name="categoryName"
-                id="categoryName"
-                className="mt-1 p-2 border rounded w-full"
-              />
-              <ErrorMessage
-                name="categoryName"
-                component="div"
-                className="text-red-500 mt-1 text-sm"
-              />
-            </div>
+              {/* Product Category */}
+              <div className="mb-4">
+                <label
+                  htmlFor="categoryName"
+                  className="block text-sm font-medium text-gray-700"
+                >
+                  Product Category Name
+                </label>
+                <Field
+                  type="text"
+                  name="categoryName"
+                  id="categoryName"
+                  className="mt-1 p-2 border rounded w-full"
+                />
+                <ErrorMessage
+                  name="categoryName"
+                  component="div"
+                  className="text-red-500 mt-1 text-sm"
+                />
+              </div>
+            </section>
 
-            {/* Product Category Icon*/}
-            <div className="mb-4">
-              <label
-                htmlFor="fileIcon"
-                className="block text-sm font-medium text-gray-700"
-              >
-                Product Category Icon
-              </label>
-              <Field
-                type="file"
-                name="fileIcon"
-                id="fileIcon"
-                component={CustomInput}
-                setFieldValue={setFieldValue}
-                className="mt-1"
-              />
-              <ErrorMessage
-                name="fileIcon"
-                component="div"
-                className="text-red-500 mt-1 text-sm"
-              />
-            </div>
+            <section className="flex flex-col items-start px-6">
+              {/* Product Category Icon*/}
+              <div className="mb-4 flex flex-col p">
+                <label
+                  htmlFor="fileIcon"
+                  className="block text-sm font-medium text-gray-700 my-2"
+                >
+                  Product Category Icon
+                </label>
+                <Field
+                  type="file"
+                  name="fileIcon"
+                  id="fileIcon"
+                  component={CustomInput}
+                  setFieldValue={setFieldValue}
+                  className="mt-1"
+                />
+                <ErrorMessage
+                  name="fileIcon"
+                  component="div"
+                  className="text-red-500 mt-1 text-sm"
+                />
+              </div>
 
-            {/* Product Image*/}
-            <div className="mb-4">
-              <label
-                htmlFor="fileProduct"
-                className="block text-sm font-medium text-gray-700"
-              >
-                Product Image
-              </label>
-              <Field
-                type="file"
-                name="fileProduct"
-                id="fileProduct"
-                component={CustomInput}
-                setFieldValue={setFieldValue}
-                className="mt-1"
-              />
-              <ErrorMessage
-                name="fileProduct"
-                component="div"
-                className="text-red-500 mt-1 text-sm"
-              />
-            </div>
+              {/* Product Image*/}
+              <div className="mb-4">
+                <label
+                  htmlFor="fileProduct"
+                  className="block text-sm font-medium text-gray-700 my-2"
+                >
+                  Product Image
+                </label>
+                <Field
+                  type="file"
+                  name="fileProduct"
+                  id="fileProduct"
+                  component={CustomInput}
+                  setFieldValue={setFieldValue}
+                  className="mt-1"
+                />
+                <ErrorMessage
+                  name="fileProduct"
+                  component="div"
+                  className="text-red-500 mt-1 text-sm"
+                />
+              </div>
+            </section>
 
             {/* button submit */}
-            <button
-              type="submit"
-              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-            >
-              Submit
-            </button>
+
+            <div className="flex flex-row px-6">
+              <div>
+                <button
+                  type="submit"
+                  className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+                >
+                  Submit
+                </button>
+              </div>
+
+              <div className="ml-4">
+                <button
+                  onClick={() => router.push(`/dashboard`)}
+                  className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:ring-2 focus:ring-red-500"
+                >
+                  Cancel
+                </button>
+              </div>
+            </div>
           </Form>
         )}
       </Formik>

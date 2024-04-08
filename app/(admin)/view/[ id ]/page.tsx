@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import { useEffect, useState } from "react";
 import API_URL, { ProductType } from "@/lib/definitions";
 import { Modal } from "flowbite-react";
@@ -9,8 +9,7 @@ interface ViewPageProps {
   onClose: () => void;
 }
 
-
-const ViewPage = ({ productDetail, onClose }:any) => {
+const ViewPage = ({ productDetail, onClose }: any) => {
   const [data, setData] = useState<any>(null);
   const imagePlaceholder =
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTI4PG970kLEIAwXbJGaMfq5tlVDqnBbuDP_MRmm2JlhA&s";
@@ -36,6 +35,21 @@ const ViewPage = ({ productDetail, onClose }:any) => {
       {/* for product detail */}
       <Modal show={true} onClose={onClose}>
         <h1 className="text-center text-3xl py-6">Product Detail</h1>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="h-6 w-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            d="M6 18L18 6M6 6l12 12"
+            href="/dashboard"
+          />
+        </svg>
         <Modal.Body className="bg-gray-200">
           <div className="grid  space-y-6 justify-center items-center">
             <Image
@@ -45,14 +59,26 @@ const ViewPage = ({ productDetail, onClose }:any) => {
               height={300}
               className="mx-auto rounded"
             />
-            <h3 className="text-3xl text-gray-700">
-              {productDetail?.name || "Untitled"}
-            </h3>
-            <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-              {data?.desc || "No description available"}
-            </p>
-            <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-              Price: {data?.price || 0} USD
+            <a>
+              <h5 className="text-center text-xl font-bold text-gray-900 ">
+                {data?.name}
+              </h5>
+            </a>
+
+            <div className="flex flex-col gap-4 mt-3">
+              <span className="bg-white  px-4 py-2 text-md font-bold text-gray-900 rounded-lg ">
+                Seller: {data?.seller}
+              </span>
+              <span className="bg-white  px-4 py-2 text-md font-bold text-gray-900 rounded-lg ">
+                Category: {data?.category?.name || "No category"}
+              </span>
+            </div>
+            <span className="bg-white  px-4 py-2 text-md font-bold text-gray-900 rounded-lg ">
+              Price: ${data?.price}
+            </span>
+
+            <p className="bg-white  px-4 py-2 text-md  text-gray-900 rounded-lg ">
+              {data?.desc}
             </p>
           </div>
         </Modal.Body>

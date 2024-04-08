@@ -9,14 +9,15 @@ export default function AdminLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  
   const [isShowSideBar, setIsShowSideBar] = useState<boolean>(true);
   console.log("isShowSideBar", isShowSideBar);
   return (
     <html>
-      <body className="flex none-scroll-bar overflow-x-auto">
+      <body className="flex none-scroll-bar overflow-x-auto bg-gray-300">
         <MenuIcon
-          onClick={() => setIsShowSideBar(!isShowSideBar)}
-          classname="h-8 w-8 fixed bottom-0 m-4 cursor-pointer lg:hidden"
+          onClick={() => setIsShowSideBar(!isShowSideBar)} 
+          classname="h-8 w-8 fixed top-0 m-4 cursor-pointer lg:hidden"
         />
         <aside
           className={`sticky left-0 z-10 h-screen ${

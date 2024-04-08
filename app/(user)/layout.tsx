@@ -26,7 +26,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="bg-gray-300">
       <body
         className={`${suwannaphum.variable} ${inter.variable} ${localCustomFont.variable} h-screen bg-gray-300 flex flex-col justify-between`}
       >

@@ -14,6 +14,11 @@ export const MenuList = [
         path: "/policy",
         active: false,
     },
+    {
+        name: "Dashboard",
+        path: "/dashboard",
+        active: false,
+    },
    
   
 ]
