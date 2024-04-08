@@ -20,7 +20,7 @@ type ProductType = {
 };
 
 const token =
-  "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE0NjU3ODU2LCJpYXQiOjE3MTI0OTc4NTYsImp0aSI6IjI4ZjFiM2RjNmZmZjRlOWFiMmNjOTFiOWU5NDlhZmY2IiwidXNlcl9pZCI6Njh9.j4fItvddJ7yAdvK1joNlWmVdyOEQ3-7q9Rcoa_jMpmo";
+"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE0NzE5MDgyLCJpYXQiOjE3MTI1NTkwODIsImp0aSI6ImU0ODcwOWE4NzJhZTQ2NGFhOGQxNDM4NjI2YTE3M2E3IiwidXNlcl9pZCI6Njh9.PKy7gppd5E66yI77EnF3ZK_5aRXxhOsO03pybWIPDp4";
 
 const initialValues = {
   categoryName: "",
@@ -34,8 +34,7 @@ const initialValues = {
   fileProduct: null,
 };
 
-
-export {  token, initialValues , API_URL_CREATE};
+export { token, initialValues, API_URL_CREATE };
 export default API_URL;
 export type { ProductType };
 // export { token };

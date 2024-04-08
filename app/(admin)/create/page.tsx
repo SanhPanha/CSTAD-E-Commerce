@@ -66,7 +66,7 @@ export default function Product() {
     const rest = await fetch(`${API_URL_CREATE}file/${typeFile}/`, {
       method: "POST",
       headers: {
-        Authorization: `Bearer ${localStorage.getItem(token)}`,
+        Authorization: `Bearer ${token}`,
       },
       body: formData,
     });
@@ -101,7 +101,7 @@ export default function Product() {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Authorization: `Bearer ${localStorage.getItem("token")}`,
+        Authorization: `Bearer ${token}`,
       },
       body: JSON.stringify(value),
     });
