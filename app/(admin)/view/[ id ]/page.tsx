@@ -67,7 +67,7 @@ const ViewPage = ({ productDetail, onClose }: any) => {
 
             <div className="flex flex-col gap-4 mt-3">
               <span className="bg-white  px-4 py-2 text-md font-bold text-gray-900 rounded-lg ">
-                Seller: {data?.seller}
+                Seller: {data?.seller || "No Seller"}
               </span>
               <span className="bg-white  px-4 py-2 text-md font-bold text-gray-900 rounded-lg ">
                 Category: {data?.category?.name || "No category"}
@@ -78,7 +78,7 @@ const ViewPage = ({ productDetail, onClose }: any) => {
             </span>
 
             <p className="bg-white  px-4 py-2 text-md  text-gray-900 rounded-lg ">
-              {data?.desc}
+              {data?.desc || "No Description"}
             </p>
           </div>
         </Modal.Body>

@@ -36,7 +36,7 @@ export default function Dashboard() {
     setOpenModal(true);
   };
 
-  const handleProductClick = (product: ProductType) => {
+  const handleEditProduct= (product: ProductType) => {
     router.push(`/edit/${product.id}`);
   };
 
@@ -71,7 +71,7 @@ export default function Dashboard() {
             View
           </button>
           <button
-            onClick={()=>handleProductClick(row)}
+            onClick={()=>handleEditProduct(row)}
             className="px-4 py-2 text-white bg-yellow-400 rounded hover:bg-yellow-500"
           >
             Edit
@@ -85,7 +85,7 @@ export default function Dashboard() {
   ];
 
   return (
-    <main className="h-screen my-10 rounded-md w-[90%]">
+    <main className=" my-10 rounded-md w-[90%]">
       <DataTable
         fixedHeader
         progressPending={loading}

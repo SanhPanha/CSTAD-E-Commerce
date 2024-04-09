@@ -3,9 +3,7 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { useState } from "react";
 import Image from "next/image";
-// import { useRouter } from "next/navigation";
-import { useRouter } from 'next/router';
-
+import { useRouter } from "next/navigation";
 
 import API_URL, {
   API_URL_CREATE,
@@ -56,8 +54,7 @@ const validationSchema = Yup.object().shape({
 });
 
 export default function EditProduct() {
-    const router = useRouter();
-  const { id } = router.query;
+  const router = useRouter();
   const handleUpload = async (
     file: any,
     name: any,
@@ -101,7 +98,7 @@ export default function EditProduct() {
   };
 
   const handleSubmitProduct = async (value: ProductType) => {
-    const res = await fetch(`${API_URL}${id}`, {
+    const res = await fetch(`${API_URL}493`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",

@@ -7,9 +7,7 @@ const nextConfig = {
       {
           hostname: "188.166.229.56"
       },
-      {
-          hostname: "api.istad.co"
-      }
+  
   ]
   },
   webpack5: true,
