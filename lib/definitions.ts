@@ -23,6 +23,7 @@ const token =
 "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE0NzE5MDgyLCJpYXQiOjE3MTI1NTkwODIsImp0aSI6ImU0ODcwOWE4NzJhZTQ2NGFhOGQxNDM4NjI2YTE3M2E3IiwidXNlcl9pZCI6Njh9.PKy7gppd5E66yI77EnF3ZK_5aRXxhOsO03pybWIPDp4";
 
 const initialValues = {
+  id : 0,
   categoryName: "",
   categoryIcon: "",
   name: "",

@@ -36,6 +36,10 @@ export default function Dashboard() {
     setOpenModal(true);
   };
 
+  const handleProductClick = (product: ProductType) => {
+    router.push(`/edit/${product.id}`);
+  };
+
   const columns: TableColumn<ProductType>[] = [
     {
       name: "Product Title",
@@ -66,7 +70,10 @@ export default function Dashboard() {
           >
             View
           </button>
-          <button className="px-4 py-2 text-white bg-yellow-400 rounded hover:bg-yellow-500">
+          <button
+            onClick={()=>handleProductClick(row)}
+            className="px-4 py-2 text-white bg-yellow-400 rounded hover:bg-yellow-500"
+          >
             Edit
           </button>
           <button className="px-4 py-2 text-white bg-red-600 rounded hover:bg-red-700">

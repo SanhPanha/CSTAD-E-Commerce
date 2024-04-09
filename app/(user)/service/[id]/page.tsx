@@ -22,7 +22,7 @@ export async function generateMetadata(
   const id = params.id;
 
   // fetch data
-  const product = await fetch(`https://store.istad.co/api/products/${id}`).then(
+  const product = await fetch(`${API_URL}${id}`).then(
     (res) => res.json()
   );
 
